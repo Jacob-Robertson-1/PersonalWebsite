@@ -1,7 +1,13 @@
-var app = angular.module("PersonalWebsite", ['ngRoute'])
+var app = angular.module("personalWebsite", ['ui.router', 'ngMaterial'])
 
-app.console(function() {
+app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
 
+  $stateprovider
+    .state("bio", {
+      templateUrl: "public/views/mainView.html"
+      url: "mainCtrl"
+    })
 
 
 
